@@ -1,0 +1,20 @@
+.top
+{
+    text-align: center;
+    border: 10px outset;
+    margin-left:25%;
+    margin-right:25%;
+}
+
+.grid
+{
+    display: flex;
+
+    justify-content: center;
+
+    margin-top: 10%;
+}
+
+h5{
+    margin-top:200px;
+}

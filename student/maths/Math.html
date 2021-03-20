@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>repl.it</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+    
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js">
+
+	</script>
+	<!-- <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js">
+	</script> -->
+
+</head>
+
+<body>
+	<h1>Ask your question Here!
+
+		<br />
+        
+
+        </h1>
+        <p>
+          <ul>
+            <li>Hover and click over student names to see student details</li>
+            <li>Hover over '+' button to view and fill student addition form to add students</li>
+            <li> Click on edit " ✎" icon to update student details or " ☓" delete icons for deleting students </li>
+          </ul>
+        </p>
+        <ul id="userList"></ul>
+        <div id="userDetail">
+            <p>
+                NAME :
+                <strong class="detailName"></strong>
+            </p>
+            <p>
+                AGE:
+                <strong class="detailAge"></strong>
+            </p>
+            <p>
+                EMAIL:
+                <strong class="detailEmail"></strong>
+            </p>
+               <p>
+                Question :
+                <strong class="detailHobbies"></strong>
+            </p>
+        </div>
+        <!-- add user module -->
+        <div>
+<section id="add-user-module"> <button id="open-add-user-form-btn">+</button>
+    <br>
+    <button onclick="location.href='../student.html'" >Return To home</button>
+    <form>
+        <h2>Add User</h2> 
+        <label>name:</label><br> <input type='text' data-key='name' class='user-input'>
+        <br> <label>age:</label><br> <input
+            type='text' data-key='age' class='user-input'><br> <label>email:</label><br> <input type='text' data-key='email'
+            class='user-input'>
+            <br>
+            <label>question:</label><br> <input type='text' data-key='hobbies' class='user-input'>
+            <br> <button type='button' id="add-user-btn">Add Student</button>
+            <button type='reset' id="add-user-btn">Clear</button>
+    </form>
+</section>
+</div>
+<div>
+  <!-- edit user module -->
+<section id="edit-user-module">
+    <form>
+        <h2>Edit user</h2> 
+        <input type="hidden" class="edit-userid"> 
+        name:<br> <input type='text' data-key='name'
+            class='edit-user-input'><br> 
+        age:<br> <input type='text' data-key='age' class='edit-user-input'><br>
+        email:<br> <input type='text' data-key='email' class='edit-user-input'><br> 
+        question:<br> <input type='text' data-key='hobbies' class='edit-user-input'><br> 
+        Answer:<br> <input type='text' data-key="answer" class='edit-user-input'><b></b>
+        <button type='button'
+            id="edit-user-btn">save</button>
+        <button type='button'
+            id="edit-user-btn" onclick="document.getElementById('edit-user-module').style.display = 'none';">cancel</button>    
+    </form>
+</section>
+
+  </div>
+
+<script src="https://www.gstatic.com/firebasejs/5.10.0/firebase-app.js"> 
+</script>
+<script src="https://www.gstatic.com/firebasejs/5.10.0/firebase-database.js"></script>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCaCT9wj_RvPWyrhZu3pbDMfZRPzGJDrvU",
+    authDomain: "login-system-e0421.firebaseapp.com",
+    databaseURL: "https://login-system-e0421-default-rtdb.firebaseio.com",
+    projectId: "login-system-e0421",
+    storageBucket: "login-system-e0421.appspot.com",
+    messagingSenderId: "672464783175",
+    appId: "1:672464783175:web:3d8cc395bf59ddf4502e62"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+	<script src="app.js"></script>
+
+</body>
+
+</html>

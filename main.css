@@ -1,0 +1,29 @@
+.Top
+{
+	text-align: center;
+	
+}
+
+
+.grid
+{
+	display: flex;
+
+	justify-content: space-evenly;
+
+
+}
+
+.item
+{
+	margin-top: 10%;
+}
+
+.quote
+{
+	font-family: verdana !important;
+	margin-top: 25%;
+	border: 3px dashed;
+	text-align: center;
+	
+}
