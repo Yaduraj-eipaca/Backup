@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>repl.it</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+  
+  <!-- <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js">
+  </script> -->
+
+</head>
+
+<body>
+  <h1>Question asked by stundent
+
+    <br />
+            <small>
+                <em>Read, Add, Update & Delete Data</em>
+            </small>
+        </h1>
+        <p>
+          <ul>
+            <li>Hover and click over student names to see student details</li>
+            <li>Hover over '+' button to view and fill student addition form to add students</li>
+            <li> Click on edit " ✎" icon to update student details or " ☓" delete icons for deleting students </li>
+          </ul>
+        </p>
+        <ul id="userList"></ul>
+        <div id="userDetail">
+            <p>
+                NAME :
+                <strong class="detailName"></strong>
+            </p>
+            <p>
+                AGE:
+                <strong class="detailAge"></strong>
+            </p>
+            <p>
+                EMAIL:
+                <strong class="detailEmail"></strong>
+            </p>
+               <p>
+                HOBBIES :
+                <strong class="detailHobbies"></strong>
+            </p>
+        </div>
+        <!-- add user module -->
+        <div>
+<section id="add-user-module"> <button id="open-add-user-form-btn">+</button>
+    <form>
+        <h2>Add User</h2> 
+        <label>name:</label><br> <input type='text' data-key='name' class='user-input'>
+        <br> <label>age:</label><br> <input
+            type='text' data-key='age' class='user-input'><br> <label>email:</label><br> <input type='text' data-key='email'
+            class='user-input'>
+            <br>
+            <label>hobbies:</label><br> <input type='text' data-key='hobbies' class='user-input'>
+            <br> <button type='button' id="add-user-btn">Add Student</button>
+            <button type='reset' id="add-user-btn">Clear</button>
+    </form>
+</section>
+</div>
+<div>
+  <!-- edit user module -->
+<section id="edit-user-module">
+    <form>
+        <h2>Edit user</h2> 
+        <input type="hidden" class="edit-userid"> 
+        name:<br> <input type='text' data-key='name'
+            class='edit-user-input'><br> 
+        age:<br> <input type='text' data-key='age' class='edit-user-input'><br>
+        email:<br> <input type='text' data-key='email' class='edit-user-input'><br> 
+        hobbies:<br> <input type='text' data-key='hobbies' class='edit-user-input'><br> 
+        <button type='button'
+            id="edit-user-btn">save</button>
+        <button type='button'
+            id="edit-user-btn" onclick="document.getElementById('edit-user-module').style.display = 'none';">cancel</button>    
+    </form>
+</section>
+
+  </div>
+
+<script src="https://www.gstatic.com/firebasejs/5.10.0/firebase-app.js"> 
+</script>
+<script src="https://www.gstatic.com/firebasejs/5.10.0/firebase-database.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+
+  // Your web app's Firebase configuration
+  // var firebaseConfig = {
+  //   apiKey: "AIzaSyDR_Qf7sf-KKez13CSgav_Xt-f5jD2PbWw",
+  //   authDomain: "studentdb-a2bb6.firebaseapp.com",
+  //   databaseURL: "https://studentdb-a2bb6.firebaseio.com",
+  //   projectId: "studentdb-a2bb6",
+  //   storageBucket: "studentdb-a2bb6.appspot.com",
+  //   messagingSenderId: "245310208541",
+  //   appId: "1:245310208541:web:b8d4f79cf903d277ebe4f4"
+  // };
+  // // Initialize Firebase
+  // firebase.initializeApp(firebaseConfig);
+
+  // var databaseRef = firebase.database().ref();
+
+</script>
+  <script src="app.js"></script>
+
+</body>
+
+</html>
